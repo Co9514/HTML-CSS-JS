@@ -1,0 +1,55 @@
+<html>
+<head>
+<script src=https://code.jquery.com/jquery-3.3.1.min.js></script>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    p{
+        margin: 0 auto 500px auto;
+        width: 30%;
+        font-size: 1.4em;
+        color: #555;
+    }
+    h1{
+        font-weight: 300;
+        font-size: 4em;
+        color:#fff;
+        background-color: #071d36;
+        padding: 300px 0 50px 100px;
+        margin-bottom: 150px;
+    }
+    button{
+        right: 0;
+        bottom:0;
+        position: fixed;
+        width: 100px;
+        height: 100px;
+    }
+</style>
+<script type="text/javascript">
+    $(function(){
+        var documentEl = $(document),
+            fadeElem = $('.fade-scroll');
+        documentEl.on('scroll',function(){
+            var currscrollPos = documentEl.scrollTop();
+            fadeElem.each(function(){
+                var $this = $(this),
+                    elemOffsetTop = $this.offset().top;
+                if (currscrollPos > elemOffsetTop) $this.css('opacity',1 -(currscrollPos-elemOffsetTop)/400);
+            });
+        });
+    });
+</script>
+</head>
+<body>
+    <h1 class="fade-scroll">fade me away</h1>
+    <p class="fade-scroll">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus recusandae totam pariatur, explicabo dolor sit amet, consectetur adipisicing elit. Quos illo itaque iure ea repudiandae optio aut blanditiis, nisi odit explicabo, rerum vitae quod earum, id? Suscipit dignissimos error, eius inciduntLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus recusandae totam pariatur, explicabo laboriosam nemo, repellat atque, officia est expedita rerum error id illum alias incidunt quisquam architecto praesentium assumenda.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos illo itaque iure ea repudiandae optio aut blanditiis, nisi odit explicabo, rerum vitae quod earum, id? Suscipit dignissimos error, eius inciduntLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus recusandae totam pariatur, explicabo laboriosam nemo, repellat atque, officia est expedita rerum error id illum alias incidunt quisquam architecto praesentium assumenda.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos illo itaque iure ea repudiandae optio aut blanditiis, nisi odit explicabo, rerum vitae quod earum, id? Suscipit dignissimos error, eius incidunt odit explicabo, rerum vitae quod earum, id? Suscipit dignissimos error, eius incidunt.</p>
+    <h1 class="fade-scroll">fade me away</h1>
+    <p class="fade-scroll">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus recusandae totam pariatur, explicabo dolor sit amet, consectetur adipisicing elit. Quos illo itaque iure ea repudiandae optio aut blanditiis, nisi odit explicabo, rerum vitae quod earum, id? Suscipit dignissimos error, eius inciduntLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus recusandae totam pariatur, explicabo laboriosam nemo, repellat atque, officia est expedita rerum error id illum alias incidunt quisquam architecto praesentium assumenda.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos illo itaque iure ea repudiandae optio aut blanditiis, nisi odit explicabo, rerum vitae quod earum, id? Suscipit dignissimos error, eius inciduntLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus recusandae totam pariatur, explicabo laboriosam nemo, repellat atque, officia est expedita rerum error id illum alias incidunt quisquam architecto praesentium assumenda.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos illo itaque iure ea repudiandae optio aut blanditiis, nisi odit explicabo, rerum vitae quod earum, id? Suscipit dignissimos error, eius incidunt odit explicabo, rerum vitae quod earum, id? Suscipit dignissimos error, eius incidunt.</p>
+    <h1 class="fade-scroll">fade me away</h1>
+    <p class="fade-scroll">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus recusandae totam pariatur, explicabo dolor sit amet, consectetur adipisicing elit. Quos illo itaque iure ea repudiandae optio aut blanditiis, nisi odit explicabo, rerum vitae quod earum, id? Suscipit dignissimos error, eius inciduntLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus recusandae totam pariatur, explicabo laboriosam nemo, repellat atque, officia est expedita rerum error id illum alias incidunt quisquam architecto praesentium assumenda.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos illo itaque iure ea repudiandae optio aut blanditiis, nisi odit explicabo, rerum vitae quod earum, id? Suscipit dignissimos error, eius inciduntLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus recusandae totam pariatur, explicabo laboriosam nemo, repellat atque, officia est expedita rerum error id illum alias incidunt quisquam architecto praesentium assumenda.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos illo itaque iure ea repudiandae optio aut blanditiis, nisi odit explicabo, rerum vitae quod earum, id? Suscipit dignissimos error, eius incidunt odit explicabo, rerum vitae quod earum, id? Suscipit dignissimos error, eius incidunt.</p>
+    <button>aaa</button>
+</body>
+</html>

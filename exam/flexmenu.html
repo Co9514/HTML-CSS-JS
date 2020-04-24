@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="utf-8">
+    <style>
+        @media screen and (max-width: 780px) {
+            #wrap {
+            flex-direction: column;
+            }
+        }
+        body{
+            margin: 0;
+            padding:0;
+        }
+        #wrap{
+            height:100vh;
+            display:flex;
+        }
+        .flex1{
+            background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)),url("./image/europe.jpg");
+            background-position: center center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            flex-grow: 1;
+            transition:1s;
+        }
+        .flex2{
+            background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)), url("./image/opera.jpg");
+            background-position: center center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            flex-grow:1;
+            transition:1s;
+        }
+        .flex3{
+            background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)), url("./image/newyork.jpg");
+            background-position: center center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            flex-grow:1;
+            transition:1s;
+        }
+        .flex4{
+            background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)),url("./image/osaka.jpg");
+            background-position: center center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            flex-grow: 1;
+            transition:1s;
+        }
+        .flex1:hover{
+            transition:1s;
+            flex-grow: 3;
+        }
+        .flex2:hover{
+            flex-grow:3;
+            transition:1s;
+        }
+        .flex3:hover{
+            flex-grow:3;
+            transition:1s;
+        }
+        .flex4:hover{
+            flex-grow:3;
+            transition:1s;
+        }
+        .contents{
+            font-size:1rem;
+            display:block;
+            position:relative;
+            top:50%;
+            text-align: center;
+            color:aliceblue;
+            margin:0 auto;
+        }
+        .contents h2{
+            font-size:3rem;
+            margin-bottom:1rem;
+        }
+        .contents h2:after{
+            content:''; /*h2 태그 끝나는 지점에 빈컨텐츠를 생성해주었다.*/
+            border-bottom: 3px solid white;
+            width:8rem;
+            display:block; /*컨텐츠아래에만 적용된 보더를 제한없게하기위해 블럭값을 넣어줌.*/
+            margin:0 auto;
+            margin-top:1rem;
+        }
+		.contents p{
+			margin:0 auto;
+			width:250px;
+			padding:0;
+		}
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div class="flex1">
+        <div class="contents">
+            <h2>Europe</h2><p>French England Lorem ipsum dolor scale bush man meet</p>
+        </div>
+    </div>
+    <div class="flex2">
+        <div class="contents">
+            <h2>Oceania</h2><p>French England Lorem ipsum dolor scale bush man meet</p>
+        </div>
+    </div>
+    <div class="flex3">
+        <div class="contents">
+            <h2>America</h2><p>French England Lorem ipsum dolor scale bush man meet</p>
+        </div>
+    </div>
+    <div class="flex4">
+        <div class="contents">
+            <h2>Asia</h2><p>French England Lorem ipsum dolor scale bush man meet</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

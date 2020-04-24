@@ -1,0 +1,94 @@
+﻿<!-- HTML5 기본문서의 구조(Document Structure) -->
+<!DOCTYPE html> <!-- HTML5 문서형 선언 -->
+<html lang="ko"> <!-- 2. 언어 한국어(한글) 설정, HTML5 -->
+<head>
+<meta charset="utf-8"> <!-- 3. 문자 조합, 인코딩 설정: utf-8, HTML5 -->
+<meta name="description" content="웹페이지 또는 웹사이트에 대한 짧은 설명글 삽입">
+<title>CSS3 Transition(timing-function)</title>
+<style>
+    .transition_bar{
+        width: 500px;
+        height: 500px;
+        background-image: url(../image/1229bd5f90fde54c44353e206ca8cdbd.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .transition_bar div{
+	   float:left;
+	   width:100px;
+	   height:500px;
+	   color: #fff;
+	   background-color:rgb(255, 199, 123);
+	   text-align:center;
+	   font-weight:bold;
+	}
+
+	.transition_bar:hover div{
+	height:5px;
+	}
+	.ease{
+        background-image: url(./osaka.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+	    transition:2s ease;
+	}
+	.ease-in {
+        background-image: url(./osaka.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+	    transition: 2s ease-in;
+	}
+	.ease-out {
+        background-image: url(./osaka.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+	    transition: 2s ease-out;
+	}
+	.ease-in-out {
+        background-image: url(./osaka.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+	    transition: 2s ease-in-out;
+	}
+	.linear {
+        background-image: url(./osaka.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+	    transition: 2s linear;
+	}
+</style>
+</head>
+<body>
+    <div class="transition_bar">
+	    <div class="ease">img1</div>
+	    <div class="ease-in">img2</div>
+	    <div class="ease-out">img3</div>
+	    <div class="ease-in-out">img4</div>
+	    <div class="linear">img5</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

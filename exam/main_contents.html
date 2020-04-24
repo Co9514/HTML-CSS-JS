@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<style>
+    body,h2{
+        margin:0;
+    }
+    .scene{
+        height:100vh; /*height의값을 viewport에 맞춰 100%만큼으로 바꿔준다.*/
+        overflow:hidden; /*부모의 크기보다 자식컨텐츠가 커지는 것을 막아준다.*/
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .scene.one{ /*선택자 공부...*/
+            background-image:url(./image/wing.jpg);
+    }
+    .scene.two{
+            background-image:url(./image/city.jpg);
+    }
+    .scene.three{
+            background-image:url(./image/night.jpg);
+    }
+    .scene.four{
+            background-image:url(./image/travel.jpg);
+    }
+    .intro{
+        color:white;
+        max-width: 50%;
+        position:relative; /*고정된 포지션을 수정해주기위해 포지션값을 relative를 주었다.*/
+        left:50%;
+        top:50%;
+        transform:translateX(-50%) translateY(-50%); /*자신의 컨텐츠에 입력한 값에 맞춰 변형*/
+        text-align: center;
+    }
+    h2{
+        font-size:3rem;
+        margin-bottom:1rem;
+    }
+    .scene .intro h2:after{
+        content:''; /*h2 태그 끝나는 지점에 빈컨텐츠를 생성해주었다.*/
+        border-bottom: 1px solid white;
+        width:8rem;
+        display:block; /*컨텐츠아래에만 적용된 보더를 제한없게하기위해 블럭값을 넣어줌.*/
+        margin:0 auto;
+        margin-top:1rem;
+    }
+    
+</style>
+</head>
+<body>
+    <section class="scene one">
+       <div class="intro">
+        <h2>Asia</h2>CHINA KOREA JAPAN Lorem ipsum dolor scale bush man meet
+        </div>
+    </section>
+    
+    <section class="scene two">
+       <div class="intro">
+        <h2>Asia</h2>CHINA KOREA JAPAN Lorem ipsum dolor scale bush man meet
+        </div>
+    </section>
+        
+    <section class="scene three">
+       <div class="intro">
+        <h2>Asia</h2>CHINA KOREA JAPAN Lorem ipsum dolor scale bush man meet
+        </div>
+    </section>
+        
+    <section class="scene four">
+       <div class="intro">
+        <h2>Asia</h2>CHINA KOREA JAPAN Lorem ipsum dolor scale bush man meet
+        </div>
+    </section>
+</body>
+</html>

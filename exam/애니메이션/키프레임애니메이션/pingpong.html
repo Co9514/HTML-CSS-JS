@@ -1,0 +1,40 @@
+<html>
+<head>
+    <style>
+        @keyframes bounce{
+            from,to{
+                bottom:0px;
+                animation-timing-function: ease-out;
+            }
+            50%{
+             bottom: 300px;
+             animation-timing-function: ease-in;
+            }
+        }
+        div{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            animation-name: bounce;
+            animation-iteration-count: infinite;
+        }
+        .b1{left:10px;background-color: red;animation-duration: 5s;}
+        .b2{left:30px;background-color: yellow;animation-duration: 8s;}
+        .b3{left:50px;background-color: orange;animation-duration: 3s;}
+        .b4{left:70px;background-color: blue;animation-duration: 6s;}
+        .b5{left:90px;background-color: greenyellow;animation-duration: 2s;}
+        .b6{left:110px;background-color: blueviolet;animation-duration: 4s;}
+        .b7{left:130px;background-color: darkkhaki;animation-duration: 7s;}
+    </style>
+</head>
+<body>
+    <div class="b1"></div>
+    <div class="b2"></div>
+    <div class="b3"></div>
+    <div class="b4"></div>
+    <div class="b5"></div>
+    <div class="b6"></div>
+    <div class="b7"></div>
+</body>
+</html>

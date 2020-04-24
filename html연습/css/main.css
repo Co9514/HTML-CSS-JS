@@ -1,0 +1,298 @@
+@charset "utf-8";
+/*------------------------PC용 CSS부분------------------------------*/
+        body,h1,ul{margin: 0;padding: 0;}
+        a:link{text-decoration:none; color: white;}
+        a:visited{color:white;}
+        a:hover{color:white;}
+        a:active{color:white;}
+        .name{
+            text-align: center;
+            position: relative;
+            top:100px;
+        }
+        path{
+            stroke:aliceblue;
+            fill:aliceblue;
+            stroke-dasharray:1800;
+            opacity:10;
+            animation: animate 3s cubic-bezier(0,0.23,0,.1);
+        }
+        @keyframes animate{
+            0%{
+                opacity:0.1;
+                fill:none;
+                stroke-dashoffset:2200;
+            }
+            30%{
+                opacity:.3;
+                fill:none;
+            }
+            50%{
+                opacity:.5;
+                fill:rgba(240, 248, 255, .1);
+            }
+            70%{
+                opacity:.7;
+                fill:rgba(240, 248, 255, .7);
+            }
+            100%{
+                opacity:1;
+                fill:rgba(240, 248, 255, 1);
+            }
+        }
+
+/*-------------------------------------------------------*/
+        
+.divider{/*hr구별선*/
+width:90%;
+max-width:1132px;
+margin:0 auto;
+margin-top:77px;
+margin-bottom: 77px;
+background:#eee;
+}
+.m-divider{/*hr구별선*/
+width:20px;
+margin:0 auto;
+margin-top:77px;
+background:#3f51b5;
+}@charset "utf-8";
+
+/*-----------------------------------------------------------------*/
+        .main-img{
+            position: relative;
+            height: 100vh;
+            background-image: url(../image/11b63419e19a7e4b0074df6ec5e81367.jpg);
+            background-size: cover;
+            border-image-repeat: no-repeat;
+        }
+        .infor{
+            max-width: 50%;
+            position: relative;
+            left:20%;
+            top:25%;
+        }
+        .infor>h2{
+            line-height: 2rem;
+            margin-bottom: 0;
+            color:aliceblue;
+            font:bold;
+            font-size:2.5rem;
+        }
+        .infor span{
+            color: #4594f8;
+            font-size:2.3rem;
+        }
+        .infor>p{
+            color: aliceblue;
+            font-size: 1rem;
+            max-width: 50%;
+        }
+        
+/*--------------------------네비게이션-----------------------------------------------*/
+        button{
+            background:none;
+            color:aliceblue;
+            border:none;
+            position:relative;
+            font-size:1rem;
+            cursor:pointer;
+            outline: none;
+            display: block;
+            margin: 0 auto;
+            transform:rotate(-90deg);
+            transition: 1s;
+            }
+        button:hover{
+            transition: 1s;
+            transform:rotate(-90deg)translateX(-20px);
+        }
+        
+        .gnb{
+            width: 100%;
+            position: absolute;
+            bottom:0;
+            font-size: 2rem;
+            color: aliceblue;
+        }
+        .menu{
+            margin-bottom: 0;
+            margin-right: 10%;
+            text-align: right;
+            list-style: none;
+        }
+        .list{
+            margin: 10px;
+            margin-bottom: 0;
+            padding: 20px;
+            font-size:10px;;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+        }
+
+/*-----------------------------------------------------------------*/
+        .one{
+            position: relative;
+            text-align: right;
+            top:150px;
+        }
+        .two{
+            position: relative;
+            text-align: left;
+            top:150px;
+            margin-top: 150px;
+        }
+        .three{
+            position: relative;
+            text-align: right;
+            top:150px;
+            margin-top: 150px;
+        }
+        .four{
+            position: relative;
+            text-align: left;
+            top:150px;
+            margin-top: 150px;
+        }
+        .imagebox{
+            display: inline-block;
+            background-position: center;
+            background-size: cover;
+            height: 60vh;
+            width: 50vw;
+            margin-right: 100px;
+            border-radius: 10px;
+        }
+        .num1{background-image: url("../image/forest.png");}
+        .num2{background-image: url('../image/4598116ea7369c8567c9cd4c9473991b.jpg');
+            margin-left: 100px;}
+        .num3{ background-image: url("../image/f204f520efe2c1d39e94eb52cd489fab.jpg");}
+        .num4{ background-image: url("../image/3404ff0fa6d5f0a3fa0a2d1b6f4df300.jpg");
+            margin-left: 100px;}
+        .box{
+            font-size: 1rem;
+            color:#afa7a7;
+            border-radius: 15px;
+            background-color:rgba(255, 255, 255, 0.5);
+            position: absolute;
+            display:inline-block;
+            text-align: left;
+            left: 20%;
+            top: 5em;
+            box-shadow: 5px 5px 2rem rgba(0,0,0,.4);
+        }
+        .box h3{
+            color: #6fc9a3;
+        }
+        .box p,.box h3{
+            width:500px;
+            padding:5px 30px;
+        }
+        .second,.fourth{left:50%;}
+/*-------------------미디어쿼리를 이용한 반응형-------------------------------------------*/
+.container{
+width:90%;
+max-width:1132px;
+margin:0 auto;
+}    
+.sec-tit{
+text-align: center;
+font-size:42px;
+color:#3f51b5;
+font-weight:normal;
+}
+
+/* 디스플레이 영역 CSS */
+.display-section{
+margin-top:5%;
+text-align:center;
+}
+
+.display-section .sec-tit{
+margin-bottom:30px;
+}
+    
+.display-section .desc{
+font-family:'PT Serif';
+color:#616161;
+line-height:1.9;
+}
+        /* 프로모션 영역 CSS */
+.promotion-section{
+margin-top:110px;
+}  
+.promotion-section .promo-list li{
+list-style: none;
+text-align:center;
+float:left;
+width:23.046875%;
+/* 177px ÷ 768px*/
+margin-left:2.604166666666667%;
+/* 20px ÷ 768px*/
+margin-top:0;
+}
+.promotion-section .promo-list li:first-child{
+margin-left:0;
+} 
+
+.promotion-section .promo-list li img{
+height:52px;
+}
+    
+.promotion-section .promo-list li h3{
+margin:29px 0 20px 0;
+color:#3f51b5;
+font-weight:normal;
+}
+    
+.promotion-section .promo-list li p{
+font-size:14px;
+font-family:'PT Serif';
+color:#616161;
+line-height:1.5;
+}  
+
+
+/*----------------------------- 태블릿 CSS--------------------------- */
+@media all and (max-width:1132px){
+    
+
+/* 디스플레이 영역 CSS */
+.display-section{
+margin-top:95px;
+}
+    
+}
+
+
+/*--------------------------------- 모바일용 CSS ------------------------*/
+@media all and (max-width:720px){
+
+.cfixed:after, .container:after{
+display:block;
+content:"";
+clear:both;
+}
+    
+.blind{
+position:absolute;
+width:0;
+height:0;
+line-height:0;
+text-indent:-9999px;
+overflow:hidden;
+}
+/* 프로모션 영역 CSS */
+.promotion-section{
+margin-top:68px;
+}
+.promotion-section .promo-list li{
+    clear: both;
+    width: 100%;
+    margin:0 auto;
+}    
+.promotion-section .promo-list li:first-child{
+margin-top:0;
+}
+}

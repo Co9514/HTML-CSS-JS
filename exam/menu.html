@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<style>
+	ul{list-style:none;
+		}
+	.menu>li{display:inline-block;
+			border:3px solid orange;
+			width:100px;
+			float:left;
+			text-align:center;
+			position:relative;}
+	.menu>li:hover .sub>li{display:block;}
+	.sub {position:absolute;
+		left:0;
+		right:0;
+			}
+	.sub>li{width:70px;
+			display:none;
+			border:2px solid blue;
+			}
+</style>
+</head>
+<body>
+	<ul class="menu">
+		<li>메뉴1
+			<ul class="sub">
+				<li>sub메뉴1</li>
+				<li>sub메뉴1</li>
+			</ul>
+		</li>
+		<li>메뉴2
+			<ul class="sub">
+				<li>sub메뉴2</li>
+				<li>sub메뉴2</li>
+				<li>sub메뉴2</li>
+			</ul>
+		</li>
+		<li>메뉴3</li>
+		<li>메뉴4</li>
+	</ul>	
+</body>
+</html>

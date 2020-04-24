@@ -1,0 +1,134 @@
+@charset "UTF-8";
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+.about{
+    margin-bottom: 100px;
+    height: 50vh;
+    background-image: url(../image/forest.png);
+    background-size: cover;
+    background-position:center;
+    }
+.about>h1{
+    font-size:4rem;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+
+
+
+/*---------------------------flex메뉴바구현-----------------------------------------*/
+        .flexmenu{
+        height:70vh;
+        display:flex; 
+    }
+    .flex{
+        background-position: center center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-grow: 1;
+        transition:1s;
+    }
+    .flex:hover{
+        transition:1s;
+        flex-grow: 3;
+    }
+    .one{ background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)),url("../image/europe.jpg");}
+    .two{ background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)), url("../image/opera.jpg");}
+    .three{background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)), url("../image/newyork.jpg");}
+    .four{background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)),url("../image/osaka.jpg");}
+    .contents{
+        font-size:1rem;
+        display:block;
+        position:relative;
+        top:50%;
+        text-align: center;
+        color:aliceblue;
+        margin:0 auto;
+        transform: translateY(-50%);
+    }
+    .contents h2{
+        font-size:3rem;
+        margin-bottom:1rem;
+    }
+    .contents h2:after{
+        content:''; /*h2 태그 끝나는 지점에 빈컨텐츠를 생성해주었다.*/
+        border-bottom: 3px solid white;
+        width:8rem;
+        display:block; /*컨텐츠아래에만 적용된 보더를 제한없게하기위해 블럭값을 넣어줌.*/
+        margin:0 auto;
+        margin-top:1rem;
+    }
+    .contents p{
+        margin:0 auto;
+        width:250px;
+        padding:0;
+    }
+@media screen and (max-width: 1015px) {
+        .flexmenu {
+        flex-direction: column;
+        }
+    }
+/*-----------------------------------------------------------------------------------*/
+.content{
+    display: grid;
+    grid-gap: 50px;
+    grid-auto-rows: 500px;
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.container{
+    grid-row-start: 1; 
+    grid-column-start: 2; 
+    grid-row-end: 2; 
+    grid-column-end: 4;
+    margin-top: 50px;
+    width:100%;
+}
+.container p{width:80%;}
+.box{
+    grid-row-start: 1; 
+    grid-column-start: 1; 
+    grid-row-end: 2; 
+    grid-column-end: 2;
+    background-image: url(../image/rain_street.jpg);
+    background-size: cover;
+}
+.box2{
+    grid-row-start: 2; 
+    grid-column-start: 2; 
+    grid-row-end: 3; 
+    grid-column-end: 4;
+    background-image: url(../image/rain_street.jpg);
+    background-size: cover;
+}
+.social_icon{
+    text-align: right;
+    list-style: none;
+}
+.icon{
+    display: inline-block;
+}
+.second{
+    grid-row-start: 2; 
+    grid-column-start: 1; 
+    grid-row-end: 3; 
+    grid-column-end: 2;
+    margin-top: 50px;
+}
+/*--------------------------------*/
+footer{
+    height: 30vh;
+    width: 100%;
+    background-color: #000000;
+    margin-top: 100px
+}

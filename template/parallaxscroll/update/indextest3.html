@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>실습 예제</title>
+   <link rel="stylesheet" href="./css/main.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="./javascript/parallaxscrolling.js"></script>
+	<script>
+    function fnMove(seq){
+        var offset = $(".display-section" + seq).offset();
+        $('html, body').animate({scrollTop : offset.top}, 400);
+    };
+    </script>
+</head>
+<body>
+<div class="main-img">
+<!---------------------------parallaxscrolling컨텐츠------------------------------>
+<section class="one">
+   <div class="box first">
+        <h3>Lorem ipsum dolor.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto commodi voluptate perferendis minima maiores quam saepe repellat nostrum tempore, provident cupiditate animi quis iure reprehenderit doloremque? Dolorem vel, quas quaerat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, esse itaque eos blanditiis voluptates ab quo! Temporibus quod placeat, molestiae quas tempora quia exercitationem iste eius quaerat ipsam ipsa vitae.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto commodi voluptate perferendis minima maiores quam saepe repellat nostrum tempore, provident cupiditate animi quis iure reprehenderit doloremque? Dolorem vel, quas quaerat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, esse itaque eos blanditiis voluptates ab quo! Temporibus quod placeat, molestiae quas tempora quia exercitationem iste eius quaerat ipsam ipsa vitae.</p>
+    </div>
+    <div class="imagebox num1">
+    </div>
+</section>
+<section class="two">
+   <div class="box second">
+        <h3>Lorem ipsum dolor.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto commodi voluptate perferendis minima maiores quam saepe repellat nostrum tempore, provident cupiditate animi quis iure reprehenderit doloremque? Dolorem vel, quas quaerat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, esse itaque eos blanditiis voluptates ab quo! Temporibus quod placeat, molestiae quas tempora quia exercitationem iste eius quaerat ipsam ipsa vitae.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto commodi voluptate perferendis minima maiores quam saepe repellat nostrum tempore, provident cupiditate animi quis iure reprehenderit doloremque? Dolorem vel, quas quaerat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, esse itaque eos blanditiis voluptates ab quo! Temporibus quod placeat, molestiae quas tempora quia exercitationem iste eius quaerat ipsam ipsa vitae.</p>
+    </div>
+    <div class="imagebox num2">
+    </div>
+</section>
+<section class="three">
+   <div class="box third">
+        <h3>Lorem ipsum dolor.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto commodi voluptate perferendis minima maiores quam saepe repellat nostrum tempore, provident cupiditate animi quis iure reprehenderit doloremque? Dolorem vel, quas quaerat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, esse itaque eos blanditiis voluptates ab quo! Temporibus quod placeat, molestiae quas tempora quia exercitationem iste eius quaerat ipsam ipsa vitae.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto commodi voluptate perferendis minima maiores quam saepe repellat nostrum tempore, provident cupiditate animi quis iure reprehenderit doloremque? Dolorem vel, quas quaerat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, esse itaque eos blanditiis voluptates ab quo! Temporibus quod placeat, molestiae quas tempora quia exercitationem iste eius quaerat ipsam ipsa vitae.</p>
+    </div>
+    <div class="imagebox num3">
+    </div>
+</section>
+<section class="four">
+   <div class="box fourth">
+        <h3>Lorem ipsum dolor.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto commodi voluptate perferendis minima maiores quam saepe repellat nostrum tempore, provident cupiditate animi quis iure reprehenderit doloremque? Dolorem vel, quas quaerat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, esse itaque eos blanditiis voluptates ab quo! Temporibus quod placeat, molestiae quas tempora quia exercitationem iste eius quaerat ipsam ipsa vitae.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto commodi voluptate perferendis minima maiores quam saepe repellat nostrum tempore, provident cupiditate animi quis iure reprehenderit doloremque? Dolorem vel, quas quaerat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, esse itaque eos blanditiis voluptates ab quo! Temporibus quod placeat, molestiae quas tempora quia exercitationem iste eius quaerat ipsam ipsa vitae.</p>
+    </div>
+    <div class="imagebox num4">
+    </div>
+</section>
+</div>
+</body>
+</html>

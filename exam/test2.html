@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>test</title>
+
+<style>
+
+/*body부분 여백 지우는 부분  */
+	body,ul{margin:0; padding:0}
+/*body부분 여백 지우는 부분 끝*/
+    
+/*로고 백그라운드 애니메이션 효과css부분*/
+#logo a{
+    font-family: "nanumgothic";
+	position:absolute;
+	left:2rem;
+	top:rem;
+	list-style:none;
+	font-size:4rem;
+	color: rgba(225,225,225,.1);
+	background-image:url("./image/1234.png");
+	background-repeat: repeat-x;
+	-webkit-background-clip:text;
+	animation: animate 15s Linear infinite;
+}
+@keyframes animate{
+					0%{
+						background-position: Left 0px top 0px;
+						}
+					40%{
+						background-position: Left 800px top 0px;
+						}
+					}
+/*애니메이션 효과css 끝*/
+
+	#header{height:6.6rem;
+			background-color:rgba(180,50,10,0.25);
+	}
+	
+	
+	a:link{text-decoration:none;}
+	a:visited{color:white;}
+	a:hover{color:white;}
+	a:active{color:white;}
+	#right_nav{
+            position:relative;
+			float:right;
+			right:2.3rem;
+			color:black;
+			}
+	#right_nav ul{list-style:none;
+				}
+	#right_nav li{float:right;
+				padding:0.5rem;
+				}
+/*----------------------- 드랍다운 메뉴바 CSS--------------------------------------------*/
+	#menu{
+        font-family: "nanumgothic";
+		list-style:none;
+		line-height:50px;
+		text-align:center;
+		background-color:rgba(78,122,199,0.4);
+		color:white;
+		}
+	#menu>ul{
+			font-size:0;
+	}
+	#menu>li{
+			position:relative;
+			display:inline-block;
+			font-size:1rem;
+			padding-right:5%;
+			padding-left:5%;
+	}
+	#menu li:hover{background-color:rgba(113,150,199,0.5);}
+	
+	ul>li>.sub{
+			text-align:center;
+			left:0;
+			right:0;
+			display:none;
+			position:absolute;
+			background-color:rgba(127,178,240,0.8);
+			}
+	ul>li:hover .sub{
+			display:block;
+			}
+	.sub>li{display:block;
+			}
+	/*-----------------------그리드 영역선언,사이드메뉴 css---------------------*/
+#grid{
+	display:grid;
+}
+
+#columns{
+   grid-column-start: 2;
+   grid-column-end: 7;
+   grid-row-start: 2;
+   grid-row-end: 8;
+}
+
+#small {
+    font-family: "nanumgothic";
+	margin:1rem auto;
+	font-size:3rem;
+	color:rgba(120, 25, 25, 0.4);
+   grid-column-start: 2;
+   grid-column-end: 7;
+   grid-row-start: 1;
+   grid-row-end: 2;
+}
+
+.sidenav{
+    font-family: 'nanumgothic';
+	grid-row-start:1;
+	grid-row-end:8;
+	font-size:1.3rem;
+	color: white;
+	background-color:rgb(127 178 240);
+}
+.sidenav ul li{
+	padding-left:2rem;
+	padding-top:3rem;
+	padding-bottom:1rem;
+	padding-right:2rem;
+}
+.sidenav ul li:hover{
+	background-color:rgb(113 150 199);
+}
+	/*-------------------------콘텐츠시작-----------------------*/
+
+	#columns {
+	column-width: 450px;
+	column-gap: 15px;
+	width: 90%;
+	max-width: 1500px;
+	margin:0 auto;
+}
+
+div#columns figure {
+	background: #fefefe;
+	border: 2px solid #fcfcfc;
+	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+	margin: 10px 5px 10px;
+	padding: 15px;
+	padding-bottom: 10px;
+	transition: opacity .4s ease-in-out;
+	display:inline-block;
+	column-break-inside: avoid;
+}
+
+div#columns figure img {
+	width: 100%; height: auto;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 15px;
+	margin-bottom: 5px;
+}
+
+div#columns figure figcaption {
+  font-family: "nanumgothic";
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+div#columns small { 
+  font-size: 1rem;
+  float: right; 
+  text-transform: uppercase;
+  color: #aaa;
+} 
+
+div#columns small a { 
+  color: #666; 
+  text-decoration: none; 
+  transition: .4s color;
+}
+div#columns:hover figure:not(:hover) {
+	opacity: 0.4;
+}
+    article{
+        background-color:rgba(120, 25, 25, 0.1);
+    }
+@media screen and (max-width: 750px) { 
+  #columns { column-gap: 0px; }
+  #columns figure { width: 100%; }
+}
+</style>
+</head>
+<body>
+<header>
+<div id="header">
+	<ul id="logo">
+		<li>
+	<a href="test.html">Wwing</a>
+		</li>
+	</ul>
+	<nav id="right_nav">
+		<ul>
+			<li>로그인</li>
+			<li>회원가입</li>
+			<li>고객센터</li>
+		</ul>
+	</nav>
+</div>
+
+<div>
+	<ul id="menu">
+		<li>여행정보 &#9662;
+			<ul class="sub">
+				<li>Asia</li>
+				<li>Europe</li>
+				<li>America</li>
+				<li>Oceania</li>
+			</ul>
+		</li>
+		
+		<li>커뮤니티 &#9662;
+			<ul class="sub">
+				<li>여행후기 TIP</li>
+				<li>포토</li>
+			</ul>
+		</li>
+
+		<li>항공 &#9662;
+			<ul class="sub">
+				<li>최저가항공검색</li>
+				<li>특가검색</li>
+			</ul>
+		</li>
+
+		<li>호텔 &#9662;
+			<ul class="sub">
+				<li>최저가호텔검색</li>
+				<li>추천숙박</li>
+			</ul>
+		</li>
+		
+		<li>SHOP &#9662;
+			<ul class="sub">
+				<li>비치웨어</li>
+				<li>여행용품</li>
+				<li>카메라</li>
+				<li>휴대용품</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+</header>
+<article>
+<div id="grid">
+	<div class="sidenav">
+		<ul>
+			<li>Asia</li>
+			<li>Europe</li>
+			<li>America</li>
+			<li>Oceania</li>
+		</ul>
+	</div>
+	<h2 id="small">관광지 추천</h2>	
+	<div id="columns">
+		<figure>
+			<img src="./image/flower.png" alt="flower"/>
+			<figcaption>lorem ipsom</figcaption>
+		</figure>
+		
+		<figure>
+			<img src="./image/travel.jpg" alt="image1"/>
+			<figcaption>lorem ipsom</figcaption>
+		</figure>
+		
+		<figure>
+			<img src="./image/wing.jpg" alt="wing"/>
+			<figcaption>lorem ipsom</figcaption>
+		</figure>
+	   
+		 <figure>
+			<img src="./image/다운로드.png" alt="image2"/>
+			<figcaption>lorem ipsom</figcaption>
+		</figure>
+
+		<figure>
+			<img src="./image/요트.jpg" alt="요트"/>
+			<figcaption>lorem ipsom</figcaption>
+		</figure>
+	   
+		 <figure>
+			<img src="./image/제목.jpg" alt="보라카이"/>
+			<figcaption>lorem ipsom</figcaption>
+		</figure>
+	   
+		 <figure>
+			<img src="./image/sea.jpg" alt="sea"/>
+			<figcaption>lorem ipsom</figcaption>
+		</figure>
+		
+		<figure>
+			<img src="./image/hotel.jpg" alt="hotel"/>
+			<figcaption>lorem ipsom</figcaption>
+		</figure>
+	</div>
+</div>
+</article>
+<footer>
+</footer>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>실습 예제</title>
+   <link rel="stylesheet" href="./css/03.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="./javascript/parallaxscrolling.js"></script>
+	<script>
+    function fnMove(seq){
+        var offset = $(".flex" + seq).offset();
+        $('html, body').animate({scrollTop : offset.top}, 400);
+    };
+    </script>
+</head>
+<body>
+<!---------------------flex메뉴애니메이션시작------------------------->
+<div id="wrap">
+    <div class="flex1">
+        <div class="contents">
+            <h2>Europe</h2><p>French England Lorem ipsum dolor scale bush man meet</p>
+        </div>
+    </div>
+    <div class="flex2">
+        <div class="contents">
+            <h2>Oceania</h2><p>French England Lorem ipsum dolor scale bush man meet</p>
+        </div>
+    </div>
+    <div class="flex3">
+        <div class="contents">
+            <h2>America</h2><p>French England Lorem ipsum dolor scale bush man meet</p>
+        </div>
+    </div>
+    <div class="flex4">
+        <div class="contents">
+            <h2>Asia</h2><p>French England Lorem ipsum dolor scale bush man meet</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

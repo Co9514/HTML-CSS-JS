@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>실습 예제</title>
+   <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Noto+Serif:400,700" rel="stylesheet">
+   <link rel="stylesheet" href="./css/main.css">
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+   <script src="./javascript/parallaxscrolling.js"></script>
+</head>
+<body>
+   <div id="main">
+    <header>
+        <span class="logo">WANDERLUST</span>
+    </header>
+    <div class="infor">
+        <div class="infor">
+        <h2>Loremipsum<br><span>Dolor.</span></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id praesentium cumque sequi aliquam dignissimos delectus deleniti voluptates nam repudiandae ut, magni vitae ex laborum, alias. Harum quod obcaecati doloribus sed.</p>
+    </div>
+    </div>
+    <nav>
+       <button type="button" onclick="fnMove('1')">&lt; NEXT PAGE</button>
+        <ul class="menu">
+            <li class="list"><a href="#">ABOUT</a></li>
+            <li class="list"><a href="#">TEAM</a></li>
+            <li class="list"><a href="#">PROCESS</a></li>
+            <li class="list"><a href="#">NEWS</a></li>
+            <li class="list"><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+    </div>
+<!------------------------------------------>
+   <hr class="divider">
+<!-------------------------컨텐츠시작------------------------------->
+       <div id="wrap">
+        <section class="display-section1">
+            <article>
+                <div class="container">
+                   <h2 class="sec-tit">WE ARE</h2>
+                   <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus aperiam sapiente quaerat vitae assumenda, ad enim nisi unde cumque sequi eius reiciendis inventore autem. In perspiciatis consequuntur ex, laboriosam tempore.</p>
+                </div>
+			</article>
+   <!--------------------프로모션----------------------------------------->
+        <div class="promotion-section">
+			     <ul class="promo-list">
+				    <li>
+					   <a href="#">
+					      <img src="http://edyoon.dothome.co.kr/images/s-images/promo01.png" alt="이미지01">
+						  <h3>HOTEL</h3>
+						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo assumenda esse amet adipisci, sit omnis autem.</p>
+						</a>
+					</li>
+					<li>
+					    <a href="#">
+					      <img src="http://edyoon.dothome.co.kr/images/s-images/promo02.png" alt="이미지02">
+						  <h3>COMUNITY</h3>
+						  <p>Lorem Ipsum is simply dummy text of the pringing and typesetting industry.</p>
+						</a>
+					</li>
+					<li>
+					   <a href="#">
+					      <img src="http://edyoon.dothome.co.kr/images/s-images/promo03.png" alt="이미지03">
+						  <h3>CALENDER</h3>
+						  <p>Lorem Ipsum is simply dummy text of the pringing and typesetting industry.</p>
+						</a>
+					</li>
+					<li>
+					   <a href="#">
+					      <img src="http://edyoon.dothome.co.kr/images/s-images/promo04.png" alt="이미지04">
+						  <h3>INFORMATION</h3>
+						  <p>Lorem Ipsum is simply dummy text of the pringing and typesetting industry.</p>
+						</a>
+					</li>
+				 </ul>
+		 </div>
+    </section>    
+
+     <section class="display-section2">
+<!---------------------------parallaxscrolling컨텐츠------------------------------>
+        <article class="one">
+           <div class="box first">
+                <h3>Lorem ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto commodi voluptate perferendis minima maiores quam saepe repellat nostrum tempore, provident cupiditate animi quis iure reprehenderit doloremque? Dolorem vel, quas quaerat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, esse itaque eos blanditiis voluptates ab quo! Temporibus quod placeat, molestiae quas tempora quia exercitationem iste eius quaerat ipsam ipsa vitae.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto commodi voluptate perferendis minima maiores quam saepe repellat nostrum tempore, provident cupiditate animi quis iure reprehenderit doloremque? Dolorem vel, quas quaerat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, esse itaque eos blanditiis voluptates ab quo! Temporibus quod placeat, molestiae quas tempora quia exercitationem iste eius quaerat ipsam ipsa vitae.</p>
+            </div>
+            <div class="imagebox num1">
+            </div>
+        </article>
+        <article class="two">
+           <div class="box second">
+                <h3>Lorem ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto commodi voluptate perferendis minima maiores quam saepe repellat nostrum tempore, provident cupiditate animi quis iure reprehenderit doloremque? Dolorem vel, quas quaerat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, esse itaque eos blanditiis voluptates ab quo! Temporibus quod placeat, molestiae quas tempora quia exercitationem iste eius quaerat ipsam ipsa vitae.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto commodi voluptate perferendis minima maiores quam saepe repellat nostrum tempore, provident cupiditate animi quis iure reprehenderit doloremque? Dolorem vel, quas quaerat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, esse itaque eos blanditiis voluptates ab quo! Temporibus quod placeat, molestiae quas tempora quia exercitationem iste eius quaerat ipsam ipsa vitae.</p>
+            </div>
+            <div class="imagebox num2">
+            </div>
+        </article>
+        <article class="three">
+           <div class="box third">
+                <h3>Lorem ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto commodi voluptate perferendis minima maiores quam saepe repellat nostrum tempore, provident cupiditate animi quis iure reprehenderit doloremque? Dolorem vel, quas quaerat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, esse itaque eos blanditiis voluptates ab quo! Temporibus quod placeat, molestiae quas tempora quia exercitationem iste eius quaerat ipsam ipsa vitae.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto commodi voluptate perferendis minima maiores quam saepe repellat nostrum tempore, provident cupiditate animi quis iure reprehenderit doloremque? Dolorem vel, quas quaerat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, esse itaque eos blanditiis voluptates ab quo! Temporibus quod placeat, molestiae quas tempora quia exercitationem iste eius quaerat ipsam ipsa vitae.</p>
+            </div>
+            <div class="imagebox num3">
+            </div>
+        </article>
+        <article class="four">
+           <div class="box fourth">
+                <h3>Lorem ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto commodi voluptate perferendis minima maiores quam saepe repellat nostrum tempore, provident cupiditate animi quis iure reprehenderit doloremque? Dolorem vel, quas quaerat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, esse itaque eos blanditiis voluptates ab quo! Temporibus quod placeat, molestiae quas tempora quia exercitationem iste eius quaerat ipsam ipsa vitae.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto commodi voluptate perferendis minima maiores quam saepe repellat nostrum tempore, provident cupiditate animi quis iure reprehenderit doloremque? Dolorem vel, quas quaerat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, esse itaque eos blanditiis voluptates ab quo! Temporibus quod placeat, molestiae quas tempora quia exercitationem iste eius quaerat ipsam ipsa vitae.</p>
+            </div>
+            <div class="imagebox num4"></div>
+        </article>
+    </section>
+    </div>
+    <footer>
+        <address>
+        </address>
+    </footer>
+    
+    <script>
+    function fnMove(seq){
+        var offset = $(".display-section" + seq).offset();
+        $('html, body').animate({scrollTop : offset.top}, 400);
+    };
+    </script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!Doctype html>
+<html lang="ko">
+<head>
+<!--1. <meta> 태그
+　웹페이지에 표현되진 않지만, 웹 페이지를 잘 설명하기 위한 부가 정보들을 담당한다.
+2. 사용가능한 속성
+· charset="속성값" : 브라우저에 디코딩되는 문자형식을 지정 (속성값 utf-8은 한글폰트를 정상 출력시켜줌)
+· name="description" content="내용" : 검색 결과에 대한 요약에 사용됨
+· name="keywords" content="내용" : 문서를 설명하는 중요 단어(키워드)들
+· name="author" content="내용" : 저자
+· http-equiv="refresh" content="숫자" : 지정한 시간(초) 마다 웹페이지를 리프레쉬 시켜줌 -->
+	<meta charset = "UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- 모바일 지원 -->
+	<title>김형진 html 연습 코딩</title>
+	<style>
+	body{color: gray; background-color:mistyrose; margin-left:10em;}
+	h1{color: brown;}
+	table,td,th{border:1px solid red; color:lightblue; background-color:silver;}
+	</style>
+</head>
+
+<script>
+</script>
+
+<body>
+	<h1>WEB STUDY</h1>
+	
+	<ul>
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>Javascript</li>
+	</ul>
+	
+	<p>Hello World!</p>
+
+<!--table태그는 표의 시작을 뜻함 thead=시각적변화는없지만 헤드부분임을 정의해줌 맨아래적어도 자동으로 가장 위로올라간다. tbody=마찬가지로 시각적변화는없다 tfoot=표 중앙에 태그를 입력해도 자동으로 맨아래로 내려가게된다
+th=table head로써 표의 제목을 쓰는 역할 기본적으로 굵은 글씨에 중앙정렬 td=table data 표의 값 tr=table row 행을 뜻함 colspan과 rowspan속성값을 통해 합쳐줄수있다.-->
+	<table>
+	<thead>
+		<tr>
+			<th>이름</th> <th>성별</th> <th>주소</th> <th>회비</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>김형진</td> <td>남</td> <td rowspan="2">시흥</td> <td>1000</td>
+		</tr>
+		<tr>
+			<td>김한빛</td> <td>남</td>  <td>500</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td colspan="3">합계</td>  <td>1500</td>
+		</tr>
+	</tfoot>
+	</table>
+	<div>
+	<!--img태그의 alt속성은 이미지를 불러오지못하게되거나 깨질경우 alt속성의 값을 보여주는 대체텍스트이다. alt속성은 필수로 적어주어야한다.장애인들을 위해서인데 의미없는 사진인경우 alt의 속성값을 비워두는것이 좋습니다. title속성을 통해 마우스툴팁을 표시할수있다.-->
+	<h2>이미지 클릭하여 네이버바로가기</h2>
+	<a href="https://naver.com"target="_blank"><img src="180605_travel.png" width="auto"; height="auto"; alt="네이버이동" title="image"></a>	
+	</div>
+	<!--form태그를 통해 정보를 보내준다 form action=보내게될 주소를 적게되며 input의 타입을 정한 뒤 name 속성값을 줘서 데이타 전송할때 구별을 할수있도록해줘야한다. submit 타입은 전송버튼을 만들어준다-->
+	<form action="http://localhost/login.php">
+		<h2>input 태그와 form 태그 사용법</h2>
+		<p>아이디:<input type="text" name="id"></p>
+		<p>비밀번호:<input type="password" name="pwd"></p>
+		<p>주소:<input type="text" name="address"></p>
+		<input type="submit">
+		<p><input type="button">확인</p>
+		<p><input type="checkbox">체크박스</p>
+		</p>
+	</form>
+	<!--다양한 폼 텍스트들에 대해서 --><!-- value 값을 지정해줌으로써 기본값을 넣어줄수 있다.-->
+	<form action="">
+		<p>id:<input type="text" name="id" value="default value"></p> 
+		<p>pwd:<input type="password" name="pwd" value="default value"></p>
+		<p>textarea:<textarea cols="50" rows="5">default value</textarea></p>
+	<!--다양한 폼태그의 드랍다운리스트들에 대해서 (제한된공간에서 여러개를 선택할수있는)-->
+	<h3>색상</h3>
+		<select name="color"><!--컴퓨터가 원하는 값으로 전송받을수있게해주기 위해 value를 설정 -->
+			<option value="red">붉은색</option>
+			<option value="black">검은색</option>
+			<option value="blue">파란색</option>
+		</select>
+			<h3>색상(다중선택)</h3>
+		<select name="color2" multiple><!--multiple을 통해 다중선택을 할수있게해줌 ctrl키를 누르고 선택해야함-->
+			<option value="red">붉은색</option>
+			<option value="black">검은색</option>
+			<option value="blue">파란색</option>
+		</select>
+		<input type="submit">
+	</form>
+	<form action="">
+		<input type="text">
+		<input type="submit" value="전송">
+		<input type="button" value="버튼" onclick="alert('hello world')">
+		<input type="reset"> <!--폼태그내에 사용자가 적은 모든내용이 초기화됨 -->
+	</form>
+	 <!--히든태그에 대해서 (눈에보이지않지만 서버로 어떤 값을 전송하고 싶을때 히든이라는 input태그를 통해 숨겨준다.)-->
+	<form action="">
+		<input type="text" name="id">
+		<input type="hidden" name="hide" value="egoing">
+		<input type="submit">
+	</form>
+	<!--레이블태그에 대해서 (이름표처럼 태그의 속성에 대해서 더욱 정확하게 해줄수있다. label의 for속성으로 input id속성값을 넣어줘서 정의해준다.
+					 라벨태그안에 넣어줘도 동일한효과가있다. 권장되는태그)-->
+	<form action="">
+		<p><label for="id_txt">text</label><input id="id_txt" type="text" name="id"></p>
+		<p><label for="password">password<input id="password" type="password" name="pwd"></label></p>
+		<p><label> textarea<input type="textarea"></label></p>
+		<p><label><input type="checkbox" name="color" value="red">붉은색</label></p>
+		<p><label for="color_blue"><input id="color_blue" type="checkbox" name="color" value="blue">파란색</label></p>
+		<input type="submit">
+	</form>
+	<!--form태그의 method속성 url로 노출이안되게함-->
+	<form action="" method="post">
+		<input type="text" name="id">
+		<input type="password" name="pwd">
+		<input type="submit">
+	</form>
+	<!--form 태그를 통한 파일업로드-->
+	<form action="파일을 보낼 주소" method="post" enctype="multipart/form-data">
+		<input type="file" name="profile">
+		<input type="submit">
+	</form>
+	<!--semantic태그
+	article =본문
+	aside = 광고와 같이 페이지의 내용과는 관계가 적은 내용들
+	details = 기본적으로 표시되지 않는 정보들을 정의해준다
+	figure = 삽화나 다이어그램과 같은 부가적인 요소를 정의해준다
+	footer= 화면의 하단에 위차하는 사이트나문서의 전체적인 정보를 정의해준다
+	header = 화면의 상단에 위치하는 사이트나 문서의 전체적인 정보를 정의해준다 시각적인변화가있지는 않지만 이것이 헤더에 해당하는 가장중요한 정보나 표현이 되는 의미를 가진태그
+	main =  문서에서 가장 중심이 되는 컨텐츠를 정의해준다
+	mark = 참조나 하이라이트 표시를 필요로하는 문자를 정의해준다
+	nav = 문서의 네비게이션 항목을 정의해준다
+	section = 문서의 구획들을 정의해준다
+	time = 시간을 정의해준다
+	-->
+	<!--
+	검색엔진최적화(SEO) - 검색엔진이 웹페이지를 잘 해석할 수 있게, 상위에 노출될 수 있게 html태그를 의미론적으로 잘 쓰는 것이 핵심
+1. <title>태그에 꼭 제목을 작성해라
+- 페이지마다 고유한 title태그 작성
+2. description 메타 태그를 꼭 작성해라.
+- 1~2개의 문장 정도
+3. URL구조를 개선해라.
+- 이해하기 쉽게 담고 있는 정보를 url에 나타내야 함
+- 담고 있는 정보의 단어를 사용하되 키워드를 반복하면 안됨.(검색엔진이 좋아할만한 키워드가 너무 많이
+반복되 있으면 스팸으로 간주)
+- 단순한 디렉토리 구조
+- 접근하기 위한 하나의 url만 제공(리디렉션, link rel=canonical href=... 사용)
+4. 사이트 내에서 이동하기 쉽게 만들어라
+- 대문페이지에 링크들, 경로들이 잘 작성되있어야 함.
+- 사용자가 url의 일부를 제거할 경우 고려해야 함
+- 이동 경로를 하이퍼텍스트로 제공하는 것이 좋음
+5. 질 좋은 컨텐츠를 담아라
+- 검색엔진에 입맛에 너무 맞추면 스팸 간주
+- 앵커 텍스트를 잘 작성해라(<a>...</a> ...을 말함)
+- 링크를 있는 그대로 표현해라(=관습과 다르게 꾸미거나 하지마라)
+6. img 파일을 잘 사용해라
+- alt=""를 꼭 작성해라(스크린 리더기를 사용하는 시각장애인들을 배려)
+- 이미지 파일은 images와 같은 일반적인 디렉토리에 저장
+7. robots.txt를 잘 활용해라(탐색하러 오는 로봇들에 대한 대응(?))
+- 민감한 부분은 disallow하되 이것을 완전한 보안책으로 사용하면 뚫릴 수 있음
+8. 페이지랭크
+- 구글검색엔진은 페이지랭크를 매기는되 많은 사이트에 링크되있을 수록 랭크가 높고
+- 랭크가 높은 사이트가 링크할수록 랭크가 높은 사이트가 된다. -->
+<!-- 웹개발자도구(크롬)
+1. 분석하고자하는 요소를 "마우스 우클릭 > 검사"
+　- html 코드는 물론이고 각 요소의 css 정보도 확인 가능
+
+2. 페이지 상의 아무 여백 "마우스 우클릭 > 페이지소스보기"
+　- 현재 웹페이지의 모든 html 코드 확인 가능
+
+3. 개발자도구 메뉴중 "Toggle device toolbar" 선택
+　- 현재 화면은 물론, 다양한 디바이스에서 웹페이지가 구현되는 모습을 확인 가능
+
+4. 개발자도구 메뉴중 "Network" 선택
+　- 웹브라우저와 웹서버가 주고 받는 데이터들을 체크 가능-->
+
+</body>
+</html>

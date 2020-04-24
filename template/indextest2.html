@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>실습 예제</title>
+    <style>
+        body,h1{margin: 0;padding: 0;}
+        h1{
+            color: aliceblue;
+            padding-top: 30px;
+            text-align: center;
+        }
+        .main-img{
+            position: relative;
+            height: 100vh;
+            background-image: url(image/abc.png);
+            background-size: cover;
+            border-image-repeat: no-repeat;
+        }
+        .infor{
+            max-width: 50%;
+            position: relative;
+            left:20%;
+            top:25%;
+        }
+        .infor>h2{
+            line-height: 2rem;
+            margin-bottom: 0;
+            color:aliceblue;
+            font:bold;
+            font-size:2.5rem;
+        }
+        .infor span{
+            color: #4594f8;
+            font-size:2.3rem;
+        }
+        .infor>p{
+            color: aliceblue;
+            font-size: 1rem;
+            max-width: 50%;
+        }
+        
+        button{
+            background:none;
+            color:aliceblue;
+            border:none;
+            position:relative;
+            font-size:1rem;
+            cursor:pointer;
+            outline: none;
+            display: block;
+            margin: 0 auto;
+            transform:rotate(-90deg);
+            transition: 1s;
+        }
+        button:hover{
+            transition: 1s;
+            transform:rotate(-90deg)translateX(-20px);
+        }
+        
+        .gnb{
+            width: 100%;
+            position: absolute;
+            bottom:0;
+            font-size: 2rem;
+            color: aliceblue;
+        }
+        .menu{
+            margin-bottom: 0;
+            margin-right: 10%;
+            text-align: right;
+            list-style: none;
+        }
+        .list{
+            margin: 10px;
+            margin-bottom: 0;
+            padding: 20px;
+            font-size:10px;;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+        }
+
+    </style>
+    <script>
+    </script>
+</head>
+<body>
+<div class="main-img">
+    <div class="logo"><h1>logo</h1></div>
+    <div class="infor">
+        <h2>Loremipsum<br><span>Dolor.</span></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id praesentium cumque sequi aliquam dignissimos delectus deleniti voluptates nam repudiandae ut, magni vitae ex laborum, alias. Harum quod obcaecati doloribus sed.</p>
+    </div>
+    <div class="gnb">
+        <button type="button" onclick="fnMove('1')">	
+&lt; NEXT PAGE</button>
+        <ul class="menu">
+            <li class="list">ABOUT</li>
+            <li class="list">TEAM</li>
+            <li class="list">PROCESS</li>
+            <li class="list">NEWS</li>
+            <li class="list">CONTACT</li>
+        </ul>
+    </div>
+</div>
+<!------------------------------------------------------>
+<div class="parallax--box">
+    
+</div>
+</body>
+</html>

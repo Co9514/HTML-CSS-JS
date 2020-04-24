@@ -1,0 +1,80 @@
+<style>
+	body,ul{margin:0; padding:0;}
+	#menu{
+		list-style:none;
+		line-height:50px;
+		text-align:center;
+		background-color:darkgray;
+		color:white;
+		}
+	#menu>ul{
+			font-size:0;
+	}
+	#menu>li{
+			position:relative;
+			display:inline-block;
+			font-size:15px;
+			padding-right:5%;
+			padding-left:5%;
+	}
+	#menu li:hover{background-color:gray;}
+	
+	ul>li>.sub{
+			text-align:center;
+			left:0;
+			right:0;
+			display:none;
+			position:absolute;
+			background-color:red;
+			border:1px solid blue;
+			}
+	ul>li:hover .sub{
+			display:block;
+			}
+	.sub>li{display:block;
+		}
+</style>
+<body>
+<div>
+	<ul id="menu">
+		<li>여행정보 &#9662;
+			<ul class="sub">
+				<li>Asia</li>
+				<li>Europe</li>
+				<li>America</li>
+				<li>Oceania</li>
+			</ul>
+		</li>
+		
+		<li>커뮤니티 &#9662;
+			<ul class="sub">
+				<li>여행후기 TIP</li>
+				<li>포토</li>
+			</ul>
+		</li>
+
+		<li>항공 &#9662;
+			<ul class="sub">
+				<li>최저가항공검색</li>
+				<li>특가검색</li>
+			</ul>
+		</li>
+
+		<li>호텔 &#9662;
+			<ul class="sub">
+				<li>최저가호텔검색</li>
+				<li>추천숙박</li>
+			</ul>
+		</li>
+		
+		<li>SHOP &#9662;
+			<ul class="sub">
+				<li>비치웨어</li>
+				<li>여행용품</li>
+				<li>카메라</li>
+				<li>휴대용품</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+</body>

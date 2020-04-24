@@ -1,0 +1,55 @@
+<html>
+<head>
+    <style>
+        html,body{
+            margin: 0;
+            background: #777;
+        }
+        #canvas{
+            position: fixed;
+            background: #777;
+        }
+		span{
+			font-size:2rem;
+			color:white;
+		}
+    </style>
+	 
+</head>
+<body>
+    <canvas id="canvas">
+		<span>Ex</span>
+	</canvas>
+   <script type="text/javascript">
+        var canvas = document.getElementById('canvas'),
+            ctx = canvas.getContext('2d');
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resize();
+        window.onresize = resize;
+        function noise(ctx) {
+            var w = ctx.canvas.width,
+                h = ctx.canvas.height,
+                idata = ctx.createImageData(w, h),
+                buffer32 = new Uint32Array(idata.data.buffer),
+                len=buffer32.length,
+                i = 0;
+            for(; i < len;)
+                buffer32[i++] = ((255 * Math.random()) |0) << 24;
+            ctx.putImageData(idata, 0, 0);
+        }
+        var toggle = true;
+        (function loop(){
+         toggle = !toggle;
+         if(toggle) {
+            requestAnimationFrame(loop);
+            return;
+        }
+        noise(ctx);
+        requestAnimationFrame(loop);
+         })();
+    </script>
+</body>
+</html>

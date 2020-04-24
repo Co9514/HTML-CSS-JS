@@ -1,0 +1,525 @@
+@charset "utf-8";
+/*------------------------PC용 CSS부분------------------------------*/
+/*body부분 여백 지우는 부분  */
+	body,ul{margin:0; padding:0;}
+/*body부분 여백 지우는 부분 끝*/
+
+/*로고 백그라운드 애니메이션 효과css부분*/
+#logo a{
+    font-family:"배달의민족 도현";
+	position:relative;
+    top:1rem;
+	left:2rem;
+	list-style:none;
+	font-size:2.5rem;
+	color: rgba(225,225,225,.1);
+	background-image:url("./image/1234.png");
+	background-repeat: repeat-x;
+	-webkit-background-clip:text;
+	animation: animate 15s Linear infinite;
+}
+@keyframes animate{
+					0%{
+						background-position: Left 0px top 0px;
+						}
+					40%{
+						background-position: Left 800px top 0px;
+						}
+					}
+/*애니메이션 효과css 끝*/
+	a:link{text-decoration:none;}
+	a:visited{color:white;}
+	a:hover{color:white;}
+	a:active{color:white;}
+
+    #right_nav{
+            font-size: 0.8rem;
+            position:absolute;
+			float:right;
+			right:2rem;
+            top:0.5rem;
+			color:white;
+    }
+	#right_nav ul{list-style:none;
+				}
+	#right_nav li{float:right;
+				padding:0.5rem;
+				}
+/*----------------------- 드랍다운 메뉴바 CSS--------------------------------------------*/
+.header{display: none;}
+	#menu{
+		list-style:none;
+		line-height:50px;
+		text-align:center;
+		border-bottom: 1px solid white;
+		color:white;
+		}
+	#menu>ul{
+			font-size:0;
+	}
+	#menu>li{
+			position:relative;
+			display:inline-block;
+			font-size:1rem;
+			padding-right:5%;
+			padding-left:5%;
+	}
+	#menu li:hover{background-color:rgba(113,150,199,0.5);
+    }
+	
+	ul>li>.sub{
+			text-align:center;
+			left:0;
+			right:0;
+			display:none;
+			position:absolute;
+			background-color:rgba(127,178,240,0.8);
+			}
+	ul>li:hover .sub{
+			display:block;
+			}
+	.sub>li{display:block;
+			}
+	/*-------------------------콘텐츠시작-----------------------*/
+    .scene{
+        height:100vh; /*height의값을 viewport에 맞춰 100%만큼으로 바꿔준다.*/
+        overflow:hidden; /*부모의 크기보다 자식컨텐츠가 커지는 것을 막아준다.*/
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .scene.one{
+            background-image:url(./image/abc.png);
+    }
+    .intro{
+        color:white;
+        max-width: 50%;
+        position:relative; /*고정된 포지션을 수정해주기위해 포지션값을 relative를 주었다.*/
+        left:50%;
+        top:50%;
+        transform:translateX(-50%) translateY(-50%); /*자신의 컨텐츠에 입력한 값에 맞춰 변형*/
+        text-align: center;
+    }
+    h2{
+        font-size:3rem;
+        margin-bottom:1rem;
+    }
+    .scene .intro h2:after{
+        content:''; /*h2 태그 끝나는 지점에 빈컨텐츠를 생성해주었다.*/
+        border-bottom: 1px solid white;
+        width:8rem;
+        display:block; /*컨텐츠아래에만 적용된 보더를 제한없게하기위해 블럭값을 넣어줌.*/
+        margin:0 auto;
+        margin-top:1rem;
+    }
+  
+ /*--------------------------플럭스메뉴-------------------------------------------*/  
+        @media screen and (max-width: 1015px) {
+        #wrap {
+        flex-direction: column;
+        }
+    }
+        #wrap{
+        height:100vh;
+        display:flex;
+    }
+    .flex1{
+        background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)),url("./image/europe.jpg");
+        background-position: center center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-grow: 1;
+        transition:1s;
+    }
+    .flex2{
+        background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)), url("./image/opera.jpg");
+        background-position: center center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-grow:1;
+        transition:1s;
+    }
+    .flex3{
+        background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)), url("./image/newyork.jpg");
+        background-position: center center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-grow:1;
+        transition:1s;
+    }
+    .flex4{
+        background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)),url("./image/osaka.jpg");
+        background-position: center center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-grow: 1;
+        transition:1s;
+    }
+    .flex1:hover{
+        transition:1s;
+        flex-grow: 3;
+    }
+    .flex2:hover{
+        flex-grow:3;
+        transition:1s;
+    }
+    .flex3:hover{
+        flex-grow:3;
+        transition:1s;
+    }
+    .flex4:hover{
+        flex-grow:3;
+        transition:1s;
+    }
+    .contents{
+        font-size:1rem;
+        display:block;
+        position:relative;
+        top:50%;
+        text-align: center;
+        color:aliceblue;
+        margin:0 auto;
+    }
+    .contents h2{
+        font-size:3rem;
+        margin-bottom:1rem;
+    }
+    .contents h2:after{
+        content:''; /*h2 태그 끝나는 지점에 빈컨텐츠를 생성해주었다.*/
+        border-bottom: 3px solid white;
+        width:8rem;
+        display:block; /*컨텐츠아래에만 적용된 보더를 제한없게하기위해 블럭값을 넣어줌.*/
+        margin:0 auto;
+        margin-top:1rem;
+    }
+    .contents p{
+        margin:0 auto;
+        width:250px;
+        padding:0;
+    }
+/*-----------------------nextpage버튼구현----------------------------------*/
+button{
+  background:rgba(26,171,138,0.5);
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  margin:500px auto;
+  display: block;
+}
+button:hover{
+  background:rgba(255,255,255,0);
+  color:#1AAB8A;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+/*-------------nextpage버튼 짤리는부분 수정 구현---------*/
+@media (max-width:964px){
+    .intro{top:40%;}
+    button{
+        margin:400px auto;
+    }
+}
+@media (max-width:648px){
+    .intro{top:35%;}
+        button{
+        margin:250px auto;
+    }
+}
+    /*---------------------------컨텐츠2시작------------------------------*/
+
+.divider{/*hr구별선*/
+width:90%;
+max-width:1132px;
+margin:0 auto;
+margin-top:77px;
+margin-bottom: 77px;
+background:#eee;
+}
+.m-divider{/*hr구별선*/
+width:20px;
+margin:0 auto;
+margin-top:77px;
+background:#3f51b5;
+}@charset "utf-8";
+
+
+.container{
+width:90%;
+max-width:1132px;
+margin:0 auto;
+}    
+.sec-tit{
+font-size:42px;
+color:#3f51b5;
+font-weight:normal;
+}
+
+/* 디스플레이 영역 CSS */
+.display-section{
+margin-top:5%;
+text-align:center;
+}
+
+.display-section .sec-tit{
+margin-bottom:30px;
+}
+    
+.display-section .desc{
+font-family:'PT Serif';
+color:#616161;
+line-height:1.9;
+}
+        /* 프로모션 영역 CSS */
+.promotion-section{
+margin-top:110px;
+}  
+.promotion-section .promo-list li{
+list-style: none;
+text-align:center;
+float:left;
+width:23.046875%;
+/* 177px ÷ 768px*/
+margin-left:2.604166666666667%;
+/* 20px ÷ 768px*/
+margin-top:0;
+}
+.promotion-section .promo-list li:first-child{
+margin-left:0;
+} 
+
+.promotion-section .promo-list li img{
+height:52px;
+}
+    
+.promotion-section .promo-list li h3{
+margin:29px 0 20px 0;
+color:#3f51b5;
+font-weight:normal;
+}
+    
+.promotion-section .promo-list li p{
+font-size:14px;
+font-family:'PT Serif';
+color:#616161;
+line-height:1.5;
+}  
+
+    
+/* PHOTOMENU CSS */
+.work-section{
+    position: absolute;
+    margin: 0 auto;
+}   
+.work-section .work-list li{
+float:left;
+width:25%;
+}   
+
+.work-section .work-list li a{
+display:block;
+position:relative;
+width:100%;
+height:100%;
+}
+    
+.work-section .work-list li a:before{
+display:block;
+position:absolute;
+top:0;
+left:0;
+z-index:10;
+width:100%;
+height:100%;
+background:#3f51b5;
+content:"";
+opacity:0;
+transition:all 0.2s;
+}
+    
+.work-section .work-list li a:hover:before{
+opacity:0.86;
+}
+    
+.work-section .work-list li .info{
+position:absolute;
+top:0;
+left:23px;
+z-index:20;
+opacity:0;
+transition:all 0.3s;
+}
+    
+.work-section .work-list li a:hover .info{
+transform:translateY(23px);
+opacity:1;
+}
+    
+.work-section .work-list li .info h3{
+margin-bottom:8px;
+font-size:23px;
+color:#fff;
+font-weight:normal;
+}
+    
+.work-section .work-list li .info span{
+font-size:11px;
+color:#fff;
+}
+.work-section .work-list li img{
+display:block;
+width:100%;
+max-width:100%;
+height:auto;
+}
+
+/*----------------------------- 태블릿 CSS--------------------------- */
+@media all and (max-width:1132px){
+    
+
+/* 디스플레이 영역 CSS */
+.display-section{
+margin-top:95px;
+}
+    
+    /* PHOTOMENU CSS */
+.work-section{
+margin-top:300px;
+}   
+    
+.work-section .work-list li{
+float:left;
+width:50%;
+}   
+    
+.work-section .work-list li .info{
+left:37px;
+}
+    
+.work-section .work-list li a:hover .info{
+transform:translateY(37px);
+}
+
+/*--------------------------------- 모바일용 CSS ------------------------*/
+@media all and (max-width:720px){
+
+.cfixed:after, .container:after{
+display:block;
+content:"";
+clear:both;
+}
+    
+.blind{
+position:absolute;
+width:0;
+height:0;
+line-height:0;
+text-indent:-9999px;
+overflow:hidden;
+}
+/* 프로모션 영역 CSS */
+.promotion-section{
+margin-top:68px;
+}
+.promotion-section .promo-list li{
+    clear: both;
+    width: 100%;
+    margin:0 auto;
+}    
+.promotion-section .promo-list li:first-child{
+margin-top:0;
+}
+ 
+/* PHOTOMENU CSS */
+.work-section{
+margin-top:50px;
+}   
+.work-section .work-list li{
+width:100%;
+}    
+   
+.work-section .work-list li .info{
+left:37px;
+}
+    
+.work-section .work-list li a:hover .info{
+transform:translate(50px,150px);
+}
+/*----------메뉴바----------*/
+
+#menu {display: none;}
+.header{
+display:block;
+position:relative;
+padding:18px 5%;
+}
+  
+ 
+.header .gnb{
+    list-style: none;
+display:none;
+position:absolute;
+top:100%;
+left:0;
+width:100%;
+background:#3f51b5;
+z-index: 99;
+}
+    
+.header .gnb li{
+border-bottom:1px solid #303f9f;
+}
+    
+.header .gnb li a{
+text-decoration: none;
+display:block;
+padding:14px 0 14px 20px;
+font-size:14px;
+color:#fff;
+}
+    
+.header .menu-toggle-btn{
+float:right;
+width:20px;
+margin-top:4px;
+cursor:pointer;
+}
+    
+.header .menu-toggle-btn span{
+display:block;
+width:100%;
+height:2px;
+background:#3f51b5;
+}
+    
+.header .menu-toggle-btn span:nth-child(2){
+margin:5px 0;
+}
+}

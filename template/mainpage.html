@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>mainpage</title>
+<link rel="stylesheet" type="text/css" href="./main.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    function fnMove(seq){
+        var offset = $(".flex" + seq).offset();
+        $('html, body').animate({scrollTop : offset.top}, 400);
+    }
+</script>
+<script>    
+    jQuery(function($){
+        $(".menu-toggle-btn").click(function(){
+            $(".gnb").stop().slideToggle("fast");
+        });
+    });</script>
+</head>
+<style>
+
+</style>
+<body>
+<article>
+<section class="scene one">    
+<div id=header>  
+	<ul id="logo">
+		<li>
+	<a href="test.html">Wwing</a>
+		</li>
+	</ul>
+   <header class="header cfixed"> <!-- HTML5, 문서 또는 영역의 머리말 해당하는 내용 구분 -->
+	<ul class="gnb">
+		<li><a href="#">여행정보</a></li>
+		<li><a href="#">커뮤니티</a></li>
+		<li><a href="#">항공</a></li>
+		<li><a href="#">호텔</a></li>		
+		<li><a href="#">SHOP</a></li>
+	</ul>
+		   <span class="menu-toggle-btn">
+		      <span></span>
+			  <span></span>
+			  <span></span>
+		   </span>
+	  </header>    
+</div>
+<div>
+	<ul id="menu">
+		<li>여행정보 &#9662;
+			<ul class="sub">
+				<li>Asia</li>
+				<li>Europe</li>
+				<li>America</li>
+				<li>Oceania</li>
+			</ul>
+		</li>
+		
+		<li>커뮤니티 &#9662;
+			<ul class="sub">
+				<li>여행후기 TIP</li>
+				<li>포토</li>
+			</ul>
+		</li>
+
+		<li>항공 &#9662;
+			<ul class="sub">
+				<li>최저가항공검색</li>
+				<li>특가검색</li>
+			</ul>
+		</li>
+
+		<li>호텔 &#9662;
+			<ul class="sub">
+				<li>최저가호텔검색</li>
+				<li>추천숙박</li>
+			</ul>
+		</li>
+		
+		<li>SHOP &#9662;
+			<ul class="sub">
+				<li>비치웨어</li>
+				<li>여행용품</li>
+				<li>카메라</li>
+				<li>휴대용품</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+       <div class="intro">
+        <h2>Travel</h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <button type="button" onclick="fnMove('1')">NEXT PAGE</button>
+    </section>
+
+		 <hr class="divider">
+<div id="wrap">
+    <div class="flex1">
+        <div class="contents">
+            <h2>Europe</h2><p>French England Lorem ipsum dolor scale bush man meet</p>
+        </div>
+    </div>
+    <div class="flex2">
+        <div class="contents">
+            <h2>Oceania</h2><p>French England Lorem ipsum dolor scale bush man meet</p>
+        </div>
+    </div>
+    <div class="flex3">
+        <div class="contents">
+            <h2>America</h2><p>French England Lorem ipsum dolor scale bush man meet</p>
+        </div>
+    </div>
+    <div class="flex4">
+        <div class="contents">
+            <h2>Asia</h2><p>French England Lorem ipsum dolor scale bush man meet</p>
+        </div>
+    </div>
+</div>
+ <hr class="m-divider">
+	     <section class="display-section">
+		    <div class="container">
+			   <h2 class="sec-tit">WE ARE</h2> <!-- 마음 가짐 or 보유 기술 -->
+			   <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus aperiam sapiente quaerat vitae assumenda, ad enim nisi unde cumque sequi eius reiciendis inventore autem. In perspiciatis consequuntur ex, laboriosam tempore.</p>
+			</div>
+		 </section>
+		 
+		 <section class="promotion-section">
+		     <div class="container">
+			     <ul class="promo-list">
+				    <li>
+					   <a href="#">
+					      <img src="http://edyoon.dothome.co.kr/images/s-images/promo01.png" alt="이미지01">
+						  <h3>HOTEL</h3>
+						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo assumenda esse amet adipisci, sit omnis autem.</p>
+						</a>
+					</li>
+					<li>
+					    <a href="#">
+					      <img src="http://edyoon.dothome.co.kr/images/s-images/promo02.png" alt="이미지02">
+						  <h3>COMUNITY</h3>
+						  <p>Lorem Ipsum is simply dummy text of the pringing and typesetting industry.</p>
+						</a>
+					</li>
+					<li>
+					   <a href="#">
+					      <img src="http://edyoon.dothome.co.kr/images/s-images/promo03.png" alt="이미지03">
+						  <h3>CALENDER</h3>
+						  <p>Lorem Ipsum is simply dummy text of the pringing and typesetting industry.</p>
+						</a>
+					</li>
+					<li>
+					   <a href="#">
+					      <img src="http://edyoon.dothome.co.kr/images/s-images/promo04.png" alt="이미지04">
+						  <h3>INFORMATION</h3>
+						  <p>Lorem Ipsum is simply dummy text of the pringing and typesetting industry.</p>
+						</a>
+					</li>
+				 </ul>
+			 </div>
+		 </section>
+		 
+		 <section class="work-section cfixed">
+			<ul class="work-list">
+			   <li>
+			      <a href="#">
+				     <div class="info">
+					    <h3>Running</h3>
+						<span>WEB/PRINT</span>
+					 </div>
+					 <img src="http://edyoon.dothome.co.kr/images/p-images/work01.jpg" alt="work 이미지">
+				  </a>
+			   </li>
+			   <li>
+			      <a href="#">
+				     <div class="info">
+					    <h3>Rugby</h3>
+						<span>WEB/PRINT</span>
+					 </div>
+					 <img src="http://edyoon.dothome.co.kr/images/p-images/work02.jpg" alt="work 이미지">
+				  </a>
+			   </li>
+			   <li>
+			      <a href="#">
+				     <div class="info">
+					    <h3>Weight</h3>
+						<span>WEB/PRINT</span>
+					 </div>
+					 <img src="http://edyoon.dothome.co.kr/images/p-images/work03.jpg" alt="work 이미지">
+				  </a>
+			   </li>
+			   <li>
+			      <a href="#">
+				     <div class="info">
+					    <h3>Marathon</h3>
+						<span>WEB/PRINT</span>
+					 </div>
+					 <img src="http://edyoon.dothome.co.kr/images/p-images/work04.jpg" alt="work 이미지">
+				  </a>
+			   </li>
+			   <li>
+			      <a href="#">
+				     <div class="info">
+					    <h3>Boxing</h3>
+						<span>WEB/PRINT</span>
+					 </div>
+					 <img src="http://edyoon.dothome.co.kr/images/p-images/work05.jpg" alt="work 이미지">
+				  </a>
+			   </li>
+			   <li>
+			      <a href="#">
+				     <div class="info">
+					    <h3>Ice Hockey</h3>
+						<span>WEB/PRINT</span>
+					 </div>
+					 <img src="http://edyoon.dothome.co.kr/images/p-images/work06.jpg" alt="work 이미지">
+				  </a>
+			   </li>
+			   <li>
+			      <a href="#">
+				     <div class="info">
+					    <h3>Skate Board</h3>
+						<span>WEB/PRINT</span>
+					 </div>
+					 <img src="http://edyoon.dothome.co.kr/images/p-images/work07.jpg" alt="work 이미지">
+				  </a>
+			   </li>
+			   <li>
+			      <a href="#">
+				     <div class="info">
+					    <h3>Basketball</h3>
+						<span>WEB/PRINT</span>
+					 </div>
+					 <img src="http://edyoon.dothome.co.kr/images/p-images/work08.jpg" alt="work 이미지">
+				  </a>
+			   </li>
+			</ul>
+		 </section>
+</article>
+</body>
+</html>

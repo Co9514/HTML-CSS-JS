@@ -1,0 +1,167 @@
+@charset "utf-8";
+body{
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    margin: 0; padding: 0;
+    }
+.about{
+    margin-bottom: 100px;
+    height: 50vh;
+    background-image: url(../image/forest.png);
+    background-size: cover;
+    background-position:center;
+    }
+.about>h1{
+    font-size:4rem;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+.wrap{
+    min-width: 1025px;
+}
+/*---------------------------------------------------------------*/
+.one{
+    height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.img{
+    width: 15vw;
+    height: 80vh;
+    background-image: url(../image/808c4106387f2f29a757cc7dc83f0488.jpg);
+    filter: grayscale(5);
+    background-position: -35px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    float: right;
+}
+.img_two{
+    width: 75%;
+    height: 20vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image:url(../image/rain-2538429_1920.jpg);
+    float: left;
+}
+.title{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    position: relative;
+    float: left;
+    top:50px;
+    left: 10%;
+}
+.article1{
+    width: 100%;
+}
+.content_box{
+    margin-right: 15%;
+    position: relative;
+    float: right;
+    width: 300px;
+    top:70px;
+}
+.content{
+    font-size: 0.8rem;
+    font-style: italic;
+}
+/*-------------------------------2번시작--------------------------*/
+.two{
+    clear: both;
+    position: relative;
+    top: 50px;
+    width: 80vw;
+    margin: 0 auto;
+    height: 100vh;
+}
+.pic{
+    width: 80vw;
+    height: 40vh;
+    background-image: url(../image/the-rain-logo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container h2{
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+    left: 5%;
+    top: 80px;
+    margin-bottom: 50px;
+}
+.container p{
+    font-size: 0.8rem;
+    display: inline-block;
+    width: 500px;
+    position: relative;
+    left: 20%;
+    top: 80px;
+}
+/*------------------------------------------------------------------*/
+.three{
+    width: 80vw;
+    height: 100vh;
+    margin: 200px auto;
+    margin-top: 300px;
+    position: relative;
+}
+.three p{
+    position: relative;
+    bottom: 300px;
+    width: 500px;
+    display: inline-block;
+}
+.item1{
+    display: inline-block;
+    width: 50%;
+    height: 80%;
+    background-image: url(../image/rain.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.item2{
+    margin-left: 5%;
+    width: 40%;
+    display: inline-block
+}
+.item2 h2{
+    font-size: 2rem;
+    position: relative;
+    bottom: 300px;
+}
+/*-------------------------------------------------------------------*/
+.four{
+    text-align: right;
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+.box{
+    width: 33%;
+    height: 50%;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box.first{background-image: url(../image/rain_street.jpg);}
+.box.second{ background-image: url(../image/black.jpg);}
+.item3{
+    width: 400px;
+    position: relative;
+    bottom:300px;
+    text-align: left;
+}
+.item3>h2{
+    font-size: 2rem;
+}
+.item3>p{
+    font-size: 0.8rem;
+}

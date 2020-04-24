@@ -1,0 +1,40 @@
+<html>
+<head>
+    <style>
+        ul{
+            list-style: none;
+        }
+        li{
+            padding: 10px;
+            background-color: aqua;
+            margin: 10px;
+            width:100px;
+            transition:width 5s cubic-bezier(.27,.50,.80,1);
+        }
+        li:hover{
+            width:200px;
+        }
+    </style>
+</head>
+<body>
+    <!--트랜지션은 background,color,height,width 등의 속성들에 가벼운 애니메이션 효과를 적용하는 속성
+        [트랜지션 사용 기본형식]
+        transition : property duration timingfunction;
+        1.property 애니메이션을 적용할 속성을 명시
+        2.duration 시작해서 끝날때까지 시간을 초단위로 설정
+        3.timingfunction 효과 속도의 변화를 기술한다. 정해진 함수 사용
+        -linear등속=cubic-bezier(0,0,1,1)
+        -ease:느리게 시작해서 빨라진후 다시 느리게 = cubic-bezier(0.42,0,1,1)
+        -ease-in 점점빨라진다. =cubic-bezier(0,0,0.58,1)
+        -ease-out 처음과 끝이 느리다. =cubic-bezier(0.42,0,0.58,1)
+        위의 속도 변화 함수를 사용해서 다양한 형태변화가 가능하지만 실제 큰차이를 느끼기 위해선
+        cubic-bezier(n,n,n,n)형식은 값을 입력하여 가속/감속을 조작한다.
+    -->
+    <ul>
+        <li>회사</li>
+        <li>소개</li>
+        <li>지도</li>
+        <li>어플</li>
+    </ul>
+</body>
+</html>
